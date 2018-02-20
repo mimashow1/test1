@@ -1,0 +1,677 @@
+﻿*{
+  font-family: 'Raleway', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0; /*Чтобы не было отступов от краёв сайта*/
+
+  background-color: #ffffff; /*Белый*/
+  background-image: url(../img/fon2.jpg);
+  color: #000000; /*Чёрный*/
+
+  background-attachment: fixed;
+
+}
+
+a{
+  text-decoration: none; /*Чтобы не было подчёркивания у ссылок*/
+}
+
+
+p {
+    line-height: 1.5;
+    margin-left: 5%;
+    width: 90%;
+
+    text-align: justify; /*Текст ровняется по левой и правой сторонам*/
+}
+
+
+
+
+/*HEADER*/
+#header{
+  color: #ff9c11; /*Оранжевый*/
+  background-color: #ffffff;
+  text-align: center;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  /*position: fixed;
+  width: 100%;*/
+}
+
+#header a{
+  color: #ff9c11;
+  font-size: 42px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+/*MENU*/
+#menu {
+    list-style-type: none; /*Убирает символы перед строками в списке*/
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ff9c11; /*Оранжевый*/
+    width: 100%;
+}
+
+@media all and (max-width:540px) { /*Esli razmer okna brauzera ne bolshe 540px*/
+  #menu li{
+    float:none;
+  }
+}
+
+@media all and (min-width:541px) { /*Esli razmer okna brauzera minimum 541px*/
+  #menu li {
+      float: left; /*Выравнивает текст по левому краю*/
+  }
+}
+
+#menu li a {
+    display: block;
+    color: #ffffff; /*Белый*/
+    text-align: center;
+    padding: 16px;
+}
+
+#menu li a.active { /*Если ссылка активирована*/
+    background-color: #ffc068; /*Бледно-оранжевый*/
+}
+
+#menu li a:hover, .menu li a:focus { /*Действия при наведении на ссылку*/
+    background-color: #ffc068; /*Бледно-оранжевый*/
+    transition:1.5s;
+}
+
+
+
+
+
+
+
+
+/*BODY*/
+.body {
+
+  background-color: white;
+  height: 10em;
+  /*min-height: 800px;*/
+
+  margin: 5px;
+  padding: 5px;
+  display: table; /*Chtobi blok rastagivalsa po mere uvelicenija teksta*/
+
+  border-radius: 10px;
+
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+
+
+.body a{
+  color: #000000;
+  font-weight: bold;
+}
+
+.body h1{
+  text-align: center;
+}
+
+@media all and (max-width: 540px) { /*Esli razmer okna brauzera ne bolshe 540px*/
+  .body{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+
+    border-radius: 0px;
+  }
+}
+
+@media all and (min-width: 541px) and (max-width: 720px) {
+  .body {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+  }
+}
+
+@media all and (min-width: 721px) and (max-width: 960px) {
+  .body {
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+  }
+}
+
+@media all and (min-width: 961px) {
+  .body {
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+  }
+}
+
+
+
+
+
+
+
+/*FOOTER*/
+#footer{
+  padding: 10px;
+  color:#ffffff;
+  background-color: #ff9c11; /*Оранжевый*/
+  text-align: center;
+  position: relative;
+  width: auto;
+  display: table; /*Чтобы при увеличении footer увеличивалась и закраска фона*/
+
+  bottom: 0;
+}
+
+#footer img{
+  width:50px;
+  height: 50px;
+  padding: 10px;
+}
+
+#footer a{
+  text-decoration: none;
+}
+
+
+
+#footer #sponsors-partners{
+  margin-left: 5%;
+  width: 90%;
+}
+
+#sponsors-partners .partner{
+  float: left;
+  width: 33%;
+}
+
+@media all and (max-width: 720px){
+  #sponsors-partners .partner{
+    width: 100%;
+  }
+}
+
+#sponsors-partners .partner img{
+  width: auto;
+}
+
+
+#footer #links-footer{
+  float: left;
+  width: 90%;
+  margin-left: 5%;
+}
+
+
+
+
+
+/*ПУТЁВКИ*/
+.place{
+  display: inline;
+  width: 90%;
+  margin-left: 5%;
+  height: auto;
+  border-bottom: 1px solid black;
+  float: left;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#last-place{ /*Если запись последняя, то подчёркивание примпомощи border не делать*/
+ border-bottom: none;
+}
+
+.place img{
+  height: 150px;
+  float: left;
+  margin-right: 10px;
+}
+
+.place a{
+  font-size: 21px;
+  font-weight: normal;
+}
+
+@media all and (max-width: 720px) {
+  .place img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+
+/*СТРАНИЦА С КОНТАКТНОЙ ИНФОРМАЦИЕЙ*/
+#contact_info{
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#contact_info img:hover{
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+
+  transition: 1s;
+}
+
+.body #map{
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+  height: 100%;
+  padding-bottom: 10px;
+}
+
+@media all and (max-width: 720px) {
+  .body #map{
+    max-height: 300px;
+  }
+}
+
+@media all and (min-width: 721px) {
+  .body #map{
+    max-height: 400px;
+  }
+}
+
+
+
+
+
+/*СТРАНИЦА С ВИДЕОРОЛИКАМИ*/
+.body .video{
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+  margin-bottom: 30px;
+}
+
+.body h3{
+  margin-left: 5%;
+}
+
+@media all and (max-width: 720px) {
+  .body .video{
+    height: 250px;
+  }
+}
+
+@media all and (min-width: 721px) {
+  .body .video{
+    min-height: 400px;
+  }
+}
+
+
+
+
+
+
+
+
+/*CITY*/
+#city-images{
+  width: 90%;
+
+  margin: 0;
+  padding: 0;
+
+  margin-left: 5%;
+  text-align: justify; /*Чтобы текст ровнялся как по левой, так и по правой стороне*/
+}
+
+#city-images img{ /*Настройка самих 3 фото вверху страницы о месте путёвки*/
+  width: 32.5%;
+}
+
+@media all and (max-width:540px) {
+  #city-images  img{ /*В мобильном режиме отображается только 1 картирка*/
+    display: none; /*все 3 картинки не будут видны*/
+  }
+
+  #city-images #see{ /*В мобильном режиме отображается только 1 картирка*/
+    display: inline; /*Одна картинка, у которой #see становится видимой*/
+    width: 100%;
+  }
+}
+
+
+@media all and (min-width:541px) {
+  #city-images img{ /*Не в мобильном режиме отображаются все картинки*/
+    display: inline;
+  }
+
+  #city-images img:hover{ /*При наведении на картинку, её размер плавно увеличивается*/
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+
+    transition: 1s;
+  }
+}
+
+
+#left_list{ /*Типы путёвок на страницах с их описанием*/
+    float: left;
+    list-style-type: none;
+    padding-left: 0px;
+    margin-left: 5%;
+}
+
+
+#city-prices #costs{ /*Стоимость путёвки, в зависимости от её типа*/
+    float: right;
+    list-style-type: none;
+    margin-right: 5%;
+}
+
+
+
+#offer-links{
+  width: 90%;
+  margin-left: 5%;
+}
+
+#video_link,
+#photo_link,
+#order_link{
+
+  width: 30%; /*30% + 30% + 30% + 5%(margin-right) +5%(margin-right) = 100%*/
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 100px;
+  float: left;
+  text-align: center; /*Чтобы текст ссылки был по середине*/
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media all and (max-width:540px) {
+  #video_link,
+  #photo_link,
+  #order_link{
+    width: 100%;
+  }
+}
+
+
+
+#video_link{
+  color: #ffffff;
+  background-color: #9318f7; /*Фиолетовый*/
+  margin-right: 5%;
+}
+
+#order_link{
+  color: #ffffff;
+  background-color: #ff9c11; /*Оранжевый*/
+  margin-right: 5%;
+}
+
+#photo_link{
+  color: #ffffff;
+  background-color: #03acb5; /*Голубой*/
+}
+
+
+
+
+
+
+
+
+
+
+/*ORDERING - оформление заказа*/
+#ordering{ /*Видоизменения в .body*/
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+
+@media all and (max-width:540px){
+  #ordering{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+
+    border-radius: 0px;
+  }
+}
+
+@media all and (min-width: 541px) and (max-width: 720px) {
+  #ordering {
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+  }
+}
+
+#ordering > form  > select,
+#ordering > form > input{
+  width: 90%; /*5% для margin-left , 90% для контента и 5% для отступа справа*/
+  height: 25px;
+
+  padding: 0;
+  margin: 0;
+  margin-left: 5%;
+}
+
+
+
+
+
+#radio_list{ /*Настройка самого пространства, где находятся списки*/
+  text-align: center;
+  margin-left: 5%; /*93% от 3 ul + 5% = 98%*/
+}
+
+
+#radio_list ul{
+  float: left; /*Чтобы списки были в строку*/
+  width: 31%; /*В сумме 3 ul занимают 93%*/
+  list-style-type: none;
+
+
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+
+
+#radio_list > ul li{
+  text-align: center; /*Чтобы текст в списке отображался по середине*/
+  padding-bottom: 5px;
+}
+
+
+
+
+#btn_ordering{ /*Настройка пространства, где находится кнопка*/
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  text-align: center;
+
+  /* - при обычном пользовании не нужны, но разница видна при уменьшении размера шрифта в браузере*/
+  float: none; /* - */
+  margin-left: 5%; /* - */
+  margin-right: 5%; /* - */
+}
+
+
+#btn_ordering .btn{ /*Настройка самой кнопки*/
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  height: 50px;
+  width: 120px;
+  border-radius: 100px;
+
+  background-color: #ff9c11; /*Оранжевый*/
+  color: #ffffff; /*Белый*/
+  font-weight: bold;
+  border: none;
+}
+
+
+
+#btn_ordering .btn:hover,
+#btn_ordering .btn:focus{
+  border: solid 4px #ffc068; /*Бледно-оранжевый*/
+}
+
+
+
+
+
+
+
+
+
+/*FOTO-GALLERY*/
+.gallery{ /*Настройка галереи*/
+  margin-left: 5%;
+  margin-bottom: 5%;
+  width: 90%; /*90% т.к. по 5% идут на отступы слева и справа*/
+  display: table; /*Чтобы окно .gallery растягивалось, при добавлении повых фото*/
+
+  border-radius: 10px;
+  background-color: #ff9c11; /*Оранжевый*/
+  color: #ffffff; /*Белый*/
+}
+
+.gallery img{ /*Настройка картинок в галерее*/
+  float: left;
+  padding-bottom: 5%;
+  margin-left: 5%; /*Те самые отступы слева*/
+  margin-top: 5%;
+}
+
+#group_places_links{ /*Настройка самого пространства, где находятся кнопки с названиями городов*/
+  width: 90%;
+  margin-left: 5%;
+}
+
+#group_places_links .places_links{ /*Ссылки внутри галерей с названием городов*/
+  color: #ffffff; /*Белый*/
+  background-color: #ff9c11; /*Оранжевый*/
+  padding: 5px 20px; /* 5px сверху и снизу, 15px слева и справа */
+  border-radius: 100px;
+  float: left;
+  margin-right: 10px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+.gallery .totop_links{ /*Ссылки внутри галерей "to the top"*/
+  color: #ff9c11; /*Оранжевый*/
+  background-color: #ffffff; /*Белый*/
+  padding: 5px 15px; /* 5px сверху и снизу, 15px слева и справа */
+  border-radius: 100px;
+  float: right;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 5%;
+}
+
+@media all and (max-width: 540px) { /*Esli razmer okna brauzera ne bolshe 540px*/
+  .gallery img{
+    width: 90%; /*90%, т.к. по 5% идут на отступы слева в блоке .gallery*/
+    height: auto;
+  }
+}
+
+@media all and (min-width: 541px) {
+  .gallery img{
+    height: auto;
+    width: 40%; /*40% + 40% + 5% + 5% = 90%, т.к. 5% идут на отступ слева в блоке .gallery*/
+  }
+
+  .gallery img:hover{ /*При наведении на картинку, её размер плавно увеличивается*/
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+
+    transition: 1s;
+  }
+
+}
+
+@media all and (min-width: 961px){
+  .gallery img{
+    height: auto;
+    width: 25%; /*25% + 25% + 25% + 5% + 5% + 5% = 84%, т.к. 5% идут на отступ слева в блоке .gallery P.S. больше 3% дать на отступ не получается*/
+  }
+}
+
+
+
+/*HOME*/
+#logo-home{
+  margin-left: 0px;
+  padding-left: 0px;
+  width: 50%;
+  text-align: center;
+  margin-left: 25%;
+
+  margin-top:50px;
+  margin-bottom: 10px;
+}
+
+@media all and (max-width: 540px){
+  #logo-home{
+    margin-left: 5%;
+    width: 90%;
+  }
+}
+
+#pros-home{
+  padding-left: 0px;
+  margin-left: 0px;
+  margin-left: 5%;
+}
+
+#pros-home li{
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+#pros-home img{
+  height: 75px;
+}
+
+@media all and (max-width: 540px){
+  #pros-home img{
+    height: 50px;
+  }
+}
